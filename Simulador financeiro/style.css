@@ -1,0 +1,42 @@
+*{
+    margin: 0;  /* é a margin externa*/
+    padding: 0; /* é a margin interna*/
+}
+
+
+body{
+    background-image: url(fundo.jpg);
+    background-repeat: no-repeat;/*Nao repetir a imagem*/
+    background-size: cover;
+}
+
+
+
+.container{
+    background-color: white;
+    width: 400px;
+    height: 200px;
+    padding: 25px; /* é a margin interna*/
+    text-align: center;
+    border: 5px solid black;
+    border-radius: 50px;
+    margin-left: 50px;
+    margin-top: 200px;
+   
+
+}
+
+.nav-btn{
+    background-color: white;
+    width: 400px;
+    height: 250px;
+    padding: 25px;
+    text-align: center;
+    border: 5px solid black;
+    border-radius: 50px;
+    float: right;
+    margin-right: 50px;
+    margin-top: -265px;
+
+}
+
