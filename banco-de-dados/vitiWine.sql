@@ -20,6 +20,20 @@ telefone varchar(15)
 insert into Cadastro (nome, sobrenome, cnpj, email, telefone) values
 ("Renan", "Cardoso", 37087469887, "renan.cardoso@gamil.com", 978758585);
 
+insert into Cadastro (nome, sobrenome, cnpj, email, telefone) values
+("Robert", "Souza", 35202379885, "robert.souza@yahoo.com", 985259696);
+
+insert into Cadastro (nome, sobrenome, cnpj, email, telefone) values
+("Valeria", "Cardoso", 42589689952, "valeria.cardoso@outlook.com", 972525858);
+
+insert into Cadastro (nome, sobrenome, cnpj, email, telefone) values
+("Karina", "Fragoso", 35289696378, "karina.fragoso@uol.com.br", 972459689);
+
+insert into Cadastro (nome, sobrenome, cnpj, email, telefone) values
+("Maria", "Fabiana", 45247814725, "maria.fabiana@icloud.com", 972588989);
+
+
+
 -- selecionando tabela 
 select * from Cadastro;
 
@@ -30,13 +44,12 @@ cpf varchar(12),
 email varchar(60),
 senha varchar(30),
 telefone varchar(15),
-fkCadastros int,
+fkCadastro int,
 foreign key (fkCadastro) references Cadastro (idCadastro)
 )auto_increment = 1001;
 
 -- inserindo dados na tabela usuarios
-Insert into Usuarios(nome, cpf, email, senha, telefone,fkCadastro)  values
-('Paulo Silva', '15689478542', 'paulo.silva@gmail.com', '#Psil2226', '915987541', 1);
+
 
 
 
@@ -49,13 +62,15 @@ create table Estufas
 hectares int,
 qtdPes int,
 coordenadas varchar(20),
-fkCadastro  int,
+fkCadastro int,
 foreign key (fkCadastro) references Cadastro (idCadastro)) -- chave estrangeira 
 auto_increment = 2001;
 
+-- Selecione a tabela 
+select * from Estufas;
+
 -- inserindo dados na tabela estufas
-insert into  Estufas (hectares, qtdPes, coordenadas, fkClientes) values
-(3, 5000, '07450678', 10);
+
 
 
 -- criando a tabela sensores
@@ -64,13 +79,16 @@ create table Sensores
 modelo varchar(30),
 coordenadas varchar(20),
 dtInstalacao date,
-fkEstufa int,
-foreign key (fkEstufa) references Estufa (idEstufa)) -- chave estrangeira 
+fkEstufas int,
+foreign key (fkEstufas) references Estufas (idEstufa)) -- chave estrangeira 
 auto_increment = 3001;
 
+
+-- selecione a tabela 
+select * from Sensores;
+
 -- inserindo dados na tabela sensores 
-insert into tb_Sensores (modelo, coordenadas, dtInstalacao, fkEstufa) values
-('lm35', '23.56 46.64', '2021-02-20', 2001);
+
 
 
 
@@ -80,12 +98,15 @@ create table Registros
 (idRegistros int primary key auto_increment,
 temperatura float,
 dtMedicao datetime,
-fkSensoress int,
-foreign key (fkSensoress) references Sensoress (idSensores))
+fkSensores int,
+foreign key (fkSensores) references Sensores (idSensores))
 auto_increment = 4001;
+
+-- selecione a tabela 
+select * from Registros;
+
 
 -- inserindo dados na table registros
 insert into Registros (temperatura, dtMedicao, fkSensores) values 
-(18.01, '2021-02-11 12:00:00', 3001), 
-(22.21, '2021-03-08 12:00:00', 3002),
-(14.32, '2021-04-03 12:00:00', 3003);
+(18.01, '2021-02-11 12:00:00', 4001);
+
