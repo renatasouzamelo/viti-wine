@@ -12,16 +12,19 @@ function italia() {
   var faturar1 = faturar * 6.59;
   var result = faturar1 * 0.1;
 
-  div_calc.innerHTML += `Seu lucro na uva <b>Italía</b> será de <b> R$ ${result.toFixed(2)}</b> <br> `;
+  var total = faturar + result
 
+  div_calc.innerHTML += `Seu lucro na uva <b>Italía</b> será de <b> R$ ${total.toFixed(2)}</b> <br> `;
 }
 
 function thompson() {
   var faturar = Number(faturamento.value);
   var faturar1 = faturar * 9.14;
   var result = faturar1 * 0.1;
+  
+  var total = faturar + result
 
-  div_calc.innerHTML += `Seu lucro na uva <b>Thompson</b> será de <b> R$ ${result.toFixed(2)}</b> <br> `;
+  div_calc.innerHTML += `Seu lucro na uva <b>Thompson</b> será de <b> R$ ${total.toFixed(2)}</b> <br> `;
 }
 
 function crimson() {
@@ -29,16 +32,20 @@ function crimson() {
   var faturar1 = faturar * 8.94;
   var result = faturar1 * 0.1;
 
-  div_calc.innerHTML += `Seu lucro na uva <b>Crismson</b> será de <b>R$ ${result.toFixed(2)} </b><br>`;
-}
+  var total = faturar + result
 
+  div_calc.innerHTML += `Seu lucro na uva <b>Crismson</b> será de <b>R$ ${total.toFixed(2)} </b><br>`;
+}
 
 function malbec() {
   var faturar = Number(faturamento.value);
   var faturar1 = faturar * 8.60;
   var result = faturar1 * 0.1;
 
-  div_calc.innerHTML += `Seu lucro da uva <b>Malbec</b> será de <b>R$ ${result.toFixed(2)}</b> <br>`;
+  
+  var total = faturar + result
+
+  div_calc.innerHTML += `Seu lucro da uva <b>Malbec</b> será de <b>R$ ${total.toFixed(2)}</b> <br>`;
 }
 
 function merlot() {
@@ -46,7 +53,10 @@ function merlot() {
   var faturar1 = faturar * 9.50;
   var result = faturar1 * 0.1;
 
-  div_calc.innerHTML += `Seu lucro  da uva <b>Merlot</b> será de <b> R$ ${result.toFixed(2)}</b> <br> `;
+  
+  var total = faturar + result
+
+  div_calc.innerHTML += `Seu lucro  da uva <b>Merlot</b> será de <b> R$ ${total.toFixed(2)}</b> <br> `;
 }
 
 
